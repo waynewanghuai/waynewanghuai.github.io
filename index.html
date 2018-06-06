@@ -2,26 +2,12 @@
 <head>
     <title>wgld.org WebGL sample 014</title>
     <script type="text/javascript"> 
-        window.onload = function() {
-            ucapi.invoke('freeflow.getCarrierToken', 
-                { 
-                    success : function(data) {
-                        var info = document.getElementById('info');
-                        info.append(JSON.stringify(data));
-                    },
-                    fail : function(error) {
-                        var info = document.getElementById('info');
-                        info.append('fail ' + JSON.stringify(error))
-                    }
-                }
-            );
-            var info = document.app
-        };
+        
     </script>
 </head>
 
 <body>
-
+    <script type="text/javascript" src='./.well-known/apple-app-site-association'></script>
     <div id='info'></div>
 </body>
 
