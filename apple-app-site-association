@@ -7,7 +7,7 @@
     	"details" : [
     		{
     			"appID" : "X3X7VZZ2J6.com.quark.browser.dev2team",
-    			"paths" : ["/audio/", "/js/"]
+    			"paths" : ["/audio/", "/js/", "/audio/*", "/js/*"]
     		}
     	]
     }
