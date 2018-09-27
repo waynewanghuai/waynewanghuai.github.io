@@ -1,5 +1,14 @@
 {
    "webcredentials": {
        "apps": [    "X3X7VZZ2J6.com.uc.AutoFillDemo"]
+    },
+    "applinks" : {
+    	"apps": [],
+    	"details" : [
+    		{
+    			"appID" : "X3X7VZZ2J6.com.quark.browser.dev2team",
+    			"paths" : ["/audio/", "/js/"]
+    		}
+    	]
     }
 }
