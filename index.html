@@ -1,27 +1,24 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>wgld.org WebGL sample 014</title>
-    <script type="text/javascript"> 
-        
+  <head>
+    <title>Critical Path: Measure</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      function measureCRP() {
+        var t = window.performance.timing,
+          interactive = t.domInteractive - t.domLoading,
+          dcl = t.domContentLoadedEventStart - t.domLoading,
+          complete = t.domComplete - t.domLoading;
+        var stats = document.createElement('p');
+        stats.textContent = 'interactive: ' + interactive + 'ms, ' +
+            'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';
+        document.body.appendChild(stats);
+      }
     </script>
-</head>
-
-<body>
-    <script type="text/javascript" src='./.well-known/apple-app-site-association'></script>
-    <div id='info'></div>
-    <form action="/">
-        First name:
-        <br>
-        <input type="text"  id="name" value="Mickey">
-        <br> Last name:
-        <br>
-        <input type="password" id="password" name="lastname" value="Mouse">
-        <br>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <a id="demo3" href="https://unet.ucweb.com/quarkBrowser/ulcall?st_name=JSSDK&appkey=eab7064657505959fa3cc3e1d5b2e3e2&ch=yys%40neimeng02&bid=997&pkg=com.quark.browser.dev2team&uc_param_str=cpfrvelasvprktdndd&fromULcall=1&uclink=qklink%3a%2f%2fwww.uc.cn%2feab7064657505959fa3cc3e1d5b2e3e2%3faction%3dopen_url%26url%3dhttp%253a%252f%252fwww.uc.cn%252f">universal links</a>
-</body>
-
+  </head>
+  <body onload="measureCRP()">
+    <p>Hello <span>web performance</span> students!</p>
+    <div><img src="awesome-photo.jpg"></div>
+  </body>
 </html>
