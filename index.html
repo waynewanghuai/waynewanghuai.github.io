@@ -8,7 +8,7 @@
       function measureCRP() {
         var t = window.performance.timing,
           interactive = t.domInteractive - t.domLoading,
-          dcl = t.domContentLoadedEventStart - t.domLoading,
+          dcl = t.domContentLoadedEventEnd - t.domLoading,
           complete = t.domComplete - t.domLoading;
         var stats = document.createElement('p');
         stats.textContent = 'interactive: ' + interactive + 'ms, ' +
